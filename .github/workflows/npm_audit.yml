@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: fix before dependencies installation
-        run: npm audit fix --force
+      - name: fix before dependencies installation 
+        run: npm audit fix --force || true
       - name: install dependencies
         run: npm ci
       - uses: oke-py/npm-audit-action@v1.5.2
